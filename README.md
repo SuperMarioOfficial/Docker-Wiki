@@ -14,6 +14,9 @@
 ## Deploy Static HTML Website as Container
 - Dockerfile for ***Nginx*** (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server
 ```
+<h1>Hello, from the other side</h1>
+```
+```
 FROM nginx:alpine
 COPY . /usr/share/nginx/html
 ```
