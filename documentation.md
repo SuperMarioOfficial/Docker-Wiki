@@ -56,8 +56,7 @@ On Ubuntu: ```apt-get install cgroup-tools```. On CentOS: ```yum install libcgro
 
  
 ### How to create a Dockerfile?
-```touch Dockerfile```
-***vi Dockerfile***
+- ```touch Dockerfile```
 ```
 FROM <image>:<tag>
 EXPOSE <port>
@@ -74,28 +73,7 @@ RUN <command><par1><par2><parN>
 CMD  <command><par1><par2><parN>
 ENTRYPOINT  <command><par1><par2><parN>
 ```
-### Building single executable image with scratch 
-This is the executable written in C
-```c
-#include <stdio.h>
-void main(){
-printf("Hello world\n");
-}
-```
-This is the docker image 
-```
-FROM scratch   #an explicitly empty image, especially for building images "FROM scratch". It contains only a single binary.
-COPY hello /   #copy hello bynary in the root directory in the docker container
-CMD ["/hello"] #execute the bynary 
-```
-- To build the executable ```docker container runv --rm -v ${PWD}:/src -w /src gcc:7.2 gcc -static -o hello hello.c```
-### How to redirect/map Docker cotainer to a specific port on the host? 
-```
-FROM scratch
-COPY webapp /
-EXPOSE 8080
-CMD ["/webapp"]
-```
+
 ### How to redirect Docker container to a specific volume?
 ### How to use volumes for persistent storage? When do you use a volume? 
   - bind mount to the host 
