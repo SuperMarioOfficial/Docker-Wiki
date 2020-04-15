@@ -8,4 +8,3 @@
   - attach persistent drive ``` -v <host-dir>:<container-dir>```
 - check if container is running ``` docker ps```
 - check the logs ```docker logs```
--
