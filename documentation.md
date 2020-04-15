@@ -56,7 +56,8 @@ On Ubuntu: ```apt-get install cgroup-tools```. On CentOS: ```yum install libcgro
 
  
 ### How to create a Dockerfile?
-Dockerfile is a set of instructions for the docker engine to read and build a container accordint to the plan.
+```touch Dockerfile```
+***vi Dockerfile***
 ```
 FROM <image>:<tag>
 EXPOSE <port>
