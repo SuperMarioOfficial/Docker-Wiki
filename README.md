@@ -2,6 +2,7 @@
 
 ## Deploying Your First Docker Container
 - search for an image ``` docker search <name>```
+- show images ```docker images```
 - run the image ```docker run <options> <image-name>```
   - flag for detached ```-d```  
   - map ports ```-p <host-port>:<container-port> ```
@@ -16,5 +17,6 @@
 FROM nginx:alpine
 COPY . /usr/share/nginx/html
 ```
-- Build image from docker file ```docker build -t <build-directory>.```
+- Build image from docker file ```docker build -t webserver-image:v1 .```
   - The ```-t``` parameter allows you to specify a friendly name for the image and a tag
+- Run the server ```docker run -d -p 80:80 webserver-image:v1```
