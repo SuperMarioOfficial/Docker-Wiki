@@ -104,4 +104,9 @@ CMD ["/hello"] #execute the bynary
 ```
 - Then, ```docker container runv --rm -v ${PWD}:/src -w /src gcc:7.2 gcc -static -o hello hello.c```
 
+#### dockerize a git repository 
+- [source](https://developer.okta.com/blog/2018/09/27/test-your-github-repositories-with-docker-in-five-minutes)
+```
+docker run -p 3000:3000 -e github='https://github.com/pmcdowell-okta/dockertest.git' -it oktaadmin/dockertest
+```
 
